@@ -20,3 +20,5 @@ Route::get('himy','HimyController@index');
 Route::get('himy/stories','HimyController@all');
 Route::get('himy/login','HimyController@login');
 Route::get('himy/create','HimyController@create');
+
+Route::get('dashboard','Dashboard\DashboardController@main');
