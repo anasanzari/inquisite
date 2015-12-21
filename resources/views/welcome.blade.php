@@ -1,48 +1,35 @@
-<html>
-	<head>
-		<title>Laravel</title>
-		
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+	<title>Inquisite</title>
+	{!! Html::style('css/styles.css') !!}
+	{!! Html::script('js/jquery.min.js') !!}
+	{!! Html::script('js/materialize.min.js') !!}
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
+<body class="launch">
 
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
+	<div class="container">
+			<img src="./images/logo.png"  class="responsive-img"/>
+			<h1>Inquisite</h1>
+			<h2>Launching soon.</h2>
+	</div>
 
-			.quote {
-				font-size: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
-			</div>
-		</div>
-	</body>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-51743713-2', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+</body>
 </html>
