@@ -33,3 +33,7 @@ Route::get('dashboard/articles/id/{id}/edit','ArticlesController@edit');
 Route::get('dashboard/articles/id/{id}/delete','ArticlesController@delete');
 Route::post('dashboard/articles/id/{id}','ArticlesController@save');
 Route::get('dashboard/articles/{year}/{month}','ArticlesController@listEdition');
+
+Route::get('dashboard/photoclix','PhotosController@index');
+Route::get('dashboard/photoclix/upload','PhotosController@upload');
+Route::post('dashboard/photoclix/upload','PhotosController@newupload');

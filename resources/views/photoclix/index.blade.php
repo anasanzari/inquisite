@@ -19,7 +19,7 @@
      <div class="row">
       @foreach($photos as $photo)
           <div class="col s6 m3 l3">
-           <img class="responsive-img  thebox" src="{{$photo->link}}">
+           <img class="responsive-img  thebox" src="{{url($photo->link)}}">
          </div>
       @endforeach
      </div>
