@@ -1,0 +1,29 @@
+@extends('dashboard')
+
+@section('meta')
+
+@endsection
+
+@section('content')
+
+<div class="row container admin">
+  <h3>Articles</h3>
+
+  <div class="collection">
+    @foreach($articles as $article)
+      <a href="{{url('dashboard/articles/id/'.$article->id)}}" class="collection-item">
+        {{$article->name}}
+      </a>
+    @endforeach
+  </div>
+
+</div>
+
+@endsection
+
+
+@section('script')
+<script>
+
+</script>
+@endsection

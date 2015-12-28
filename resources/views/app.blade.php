@@ -7,7 +7,7 @@
 
 	@yield('meta')
 
-	<title>myInquisite</title>
+	<title>Inquisite</title>
 	{!! Html::style('css/styles.css') !!}
 	{!! Html::script('js/jquery.min.js') !!}
 	{!! Html::script('js/materialize.min.js') !!}

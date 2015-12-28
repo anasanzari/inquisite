@@ -8830,6 +8830,12 @@ body.launch {
       .himy .storyform > .row .formbtns a, .himy .storyform > .row .formbtns button {
         margin-top: 10px; }
 
+nav ul a {
+  font-size: 1.5rem; }
+
+.admin {
+  color: #000; }
+
 /* error pages */
 .error {
   min-height: 500px; }
