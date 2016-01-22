@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Validator;
 use Illuminate\Http\Request;
 use App\Photo;
+use File;
 
 class PhotosController extends Controller {
 
@@ -32,7 +33,7 @@ class PhotosController extends Controller {
 		$validator = Validator::make($request->all(), [
 			'user' => 'required',
 			'photo' => 'required',
-			'caption' => 'required'
+			'name' => 'required'
 		]);
 		if ($validator->fails()) {
 					 return redirect('dashboard/photoclix/upload')
@@ -42,10 +43,10 @@ class PhotosController extends Controller {
 
 
 		$photo = Photo::create($request->all());
-		$photo->link = 'uploads/'.$photo->id.".jpg";
+		$photo->link = 'uploads/photoclix/'.$photo->id.".jpg";
 		$photo->save();
 
-		$destinationPath="uploads";
+		$destinationPath="uploads/photoclix";
 		$fileName=$photo->id.".jpg";
 		 if ($request->file('photo')->isValid()) {
 			 $request->file('photo')->move($destinationPath, $fileName);
@@ -59,6 +60,33 @@ class PhotosController extends Controller {
 
 		return redirect('dashboard/photoclix');
 
+	}
+
+	public function show($id)
+	{
+		$photo = Photo::find($id);
+    return view('photoclix.show',compact('photo'));
+	}
+
+	public function edit($id)
+	{
+		$photo = Photo::find($id);
+		return view('photoclix.edit',compact('photo'));
+	}
+	public function confirm_edit(Request $request,$id)
+	{
+		$photo = Photo::find($id);
+		$input = $request->all();
+		$photo->update($input);
+		return redirect('dashboard/photoclix/'.$id);
+	}
+
+	public function delete($id)
+	{
+
+		Photo::destroy($id);
+		File::delete('uploads/photoclix/'.$id.'.jpg');
+		return redirect('dashboard/photoclix');
 	}
 
 }

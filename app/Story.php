@@ -9,4 +9,9 @@ class Story extends Model {
 	protected $table = 'stories';
 	protected $fillable = ['userid','person','place','stickerid','content'];
 
+	public function user()
+    {
+        return $this->belongsTo('App\FbUser','userid');
+    }
+
 }

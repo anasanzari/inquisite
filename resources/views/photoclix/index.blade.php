@@ -19,7 +19,9 @@
      <div class="row">
       @foreach($photos as $photo)
           <div class="col s6 m3 l3">
-           <img class="responsive-img  thebox" src="{{url($photo->link)}}">
+            <img class="responsive-img  thebox" src="{{url($photo->link)}}">
+            <p style="color:black"><b>{{ $photo->name }}</b>
+               by {{ $photo->user }}</p>
          </div>
       @endforeach
      </div>

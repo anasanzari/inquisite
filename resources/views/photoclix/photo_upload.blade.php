@@ -14,7 +14,7 @@
 
   {!! Form::open(['url' => url('dashboard/photoclix/upload'),'files' => 'true']) !!}
     <div class="input-field col s12">
-      <input name="caption" type="text" class="validate">
+      <input name="name" type="text" class="validate">
       <label>Image Caption</label>
     </div>
     <div class="input-field col s12">
