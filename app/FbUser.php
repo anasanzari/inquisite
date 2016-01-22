@@ -9,4 +9,9 @@ class FbUser extends Model {
 	protected $table = 'fb_users';
 	protected $fillable = ['id','name'];
 
+	public function stories()
+	 {
+			 return $this->hasMany('App\Story');
+	 }
+
 }

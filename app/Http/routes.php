@@ -37,3 +37,11 @@ Route::get('dashboard/articles/{year}/{month}','ArticlesController@listEdition')
 Route::get('dashboard/photoclix','PhotosController@all');
 Route::get('dashboard/photoclix/upload','PhotosController@upload');
 Route::post('dashboard/photoclix/upload','PhotosController@newupload');
+Route::get('dashboard/photoclix/{id}','PhotosController@show');
+Route::get('dashboard/photoclix/{id}/edit','PhotosController@edit');
+Route::post('dashboard/photoclix/{id}/edit','PhotosController@confirm_edit');
+Route::get('dashboard/photoclix/{id}/delete','PhotosController@delete');
+
+Route::get('dashboard/himy','HimyController@all');
+Route::get('dashboard/himy/{id}','HimyController@show');
+Route::get('dashboard/himy/{id}/delete','HimyController@delete');
