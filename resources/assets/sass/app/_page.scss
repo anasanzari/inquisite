@@ -306,7 +306,6 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
 
 .interviewitem {
   padding-top: 75px;
-  min-height: 500px;
   color:#fff;
   >h1{
     padding-left: 5px;
@@ -315,10 +314,15 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
       margin-bottom: 5px;
       margin-top: -5px;
   }
+
+
   .collection {
       border: none;
       color: #000;
       background: none;
+
+
+
       .collection-item{
           border: none;
           background: none;
@@ -430,7 +434,7 @@ nav ul a{
     padding-top: 25px;
     padding-bottom: 50px;
     .input-field{
-    
+
     }
   }
 }

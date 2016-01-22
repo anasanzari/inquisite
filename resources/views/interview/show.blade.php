@@ -20,6 +20,7 @@
       </div>
       <h1 class="shadow">{{$interview->person}}</h1>
       <ul class="collection">
+        
         @foreach($all as $item)
           <li class="collection-item"><div class="box bubble-left">{{$item['ques']}}</div></li>
           <li class="collection-item"><div class="box right bubble-right">{{$item['ans']}}</div></li>

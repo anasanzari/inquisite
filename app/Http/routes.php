@@ -37,3 +37,13 @@ Route::get('dashboard/articles/{year}/{month}','ArticlesController@listEdition')
 Route::get('dashboard/photoclix','PhotosController@all');
 Route::get('dashboard/photoclix/upload','PhotosController@upload');
 Route::post('dashboard/photoclix/upload','PhotosController@newupload');
+
+
+Route::get('dashboard/interviews','InterviewController@all');
+Route::get('dashboard/interviews/create','InterviewController@create');
+Route::post('dashboard/interviews/create','InterviewController@add'); //REST
+Route::get('dashboard/interviews/{id}','InterviewController@view');
+Route::get('dashboard/interviews/rest/{id}','InterviewController@get'); //REST
+Route::get('dashboard/interviews/{id}/edit','InterviewController@edit');
+Route::post('dashboard/interviews/{id}/edit','InterviewController@save');
+Route::get('dashboard/interviews/{id}/delete','InterviewController@delete');
