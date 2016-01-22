@@ -6,10 +6,11 @@
 
 @section('content')
 
-<div class="row container admin">
-
-  <h1> Need to think about the admin page's catch.</h1>
-
+<div class="adminbg"></div>
+<div class="admin">
+  <div class="row container">
+    <h1>Welcome.</h1>
+  </div>
 </div>
 
 

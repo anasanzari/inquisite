@@ -2600,7 +2600,7 @@ nav ul a span.badge {
 
 @font-face {
   font-family: "Material-Design-Icons";
-  src: url("../font/material-design-icons/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("../font/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("../font/material-design-icons/Material-Design-Icons.woff") format("woff"), url("../font/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("../font/material-design-icons/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
+  src: url("../font/md/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("../font/md/Material-Design-Icons.woff2") format("woff2"), url("../font/md/Material-Design-Icons.woff") format("woff"), url("../font/md/Material-Design-Icons.ttf") format("truetype"), url("../font/md/Material-Design-Icons.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="mdi-"], [class*="mdi-"] {
@@ -7157,7 +7157,8 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
   position: absolute; }
 
 .select-wrapper {
-  position: relative; }
+  position: relative;
+  margin-bottom: 30px; }
   .select-wrapper input.select-dropdown {
     position: relative;
     cursor: pointer;
@@ -8582,26 +8583,65 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @font-face {
   font-family: asper;
   src: url("../font/champagne.ttf"); }
-* {
-  font-family: asper; }
-
+@font-face {
+  font-family: mainfont;
+  src: url("../font/OpenSans-Regular.ttf"); }
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url(../fonts/a.woff2) format("woff2"), url(../fonts/b.woff) format("woff"); }
+  src: url(../font/md/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(../font/md/MaterialIcons-Regular.woff2) format("woff2"), url(../font/md/MaterialIcons-Regular.woff) format("woff"), url(../font/md/MaterialIcons-Regular.ttf) format("truetype"); }
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
+  /* Preferred icon size */
   display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
   word-wrap: normal;
-  -moz-font-feature-settings: 'liga';
-  -moz-osx-font-smoothing: grayscale; }
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+* {
+  font-family: asper; }
+
+input, label, .collapsible-header, .collapsible-body p, textarea {
+  font-family: mainfont; }
+
+h1 {
+  font-size: 5rem; }
+
+h2 {
+  font-size: 3.5rem; }
+
+h3 {
+  font-size: 3rem; }
+
+h4 {
+  font-size: 2.5rem; }
+
+h5 {
+  font-size: 2rem; }
+
+.nav-wrapper, .page-footer, .launch {
+  font-family: asper; }
+  .nav-wrapper a, .page-footer a, .launch a {
+    font-family: asper; }
 
 /* launch poster page */
 body.launch {
@@ -8625,7 +8665,6 @@ body.launch {
   text-align: center; }
   .mainheader h1 {
     color: #fa3d44;
-    font-size: 5em;
     text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.9), 0px 0px 15px black; }
 
 .writer {
@@ -8651,7 +8690,7 @@ body.launch {
   background-image: url(../images/icons/ic_info.png); }
 
 /*articles page */
-.fixedbg, .articlesbg, .himbg, .articleitembg, .interviewbg {
+.fixedbg, .articlesbg, .himbg, .adminbg, .articleitembg, .interviewbg {
   position: fixed;
   top: 0;
   left: 0;
@@ -8668,6 +8707,9 @@ body.launch {
 .himbg {
   background-image: url(../images/res.jpg), radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
   filter: blur(2px); }
+
+.adminbg {
+  background-image: url(../images/dark.jpg); }
 
 .articleitembg {
   background-color: #000;
@@ -8733,6 +8775,7 @@ body.launch {
 /* photoclix */
 .photoclix {
   padding-top: 75px;
+  min-height: 400px;
   color: #fff; }
   .photoclix .row {
     text-align: center; }
@@ -8833,8 +8876,19 @@ body.launch {
 nav ul a {
   font-size: 1.5rem; }
 
+.pagination {
+  text-align: center; }
+
 .admin {
-  color: #000; }
+  color: #fff;
+  padding-top: 50px;
+  min-height: 500px; }
+  .admin .collection .collection-item {
+    color: #000;
+    font-size: 1.5rem; }
+  .admin form {
+    padding-top: 25px;
+    padding-bottom: 50px; }
 
 /* error pages */
 .error {

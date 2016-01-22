@@ -25,6 +25,9 @@
      </div>
  </div>
 
+ @include('includes.pagination', ['paginator' => $photos])
+
+
 @endsection
 
 

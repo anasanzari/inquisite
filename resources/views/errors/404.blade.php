@@ -5,7 +5,7 @@
 
 <div class="row container error">
 
-<h1>Oh No! Looks like we don't have what you are looking for.</h1>
+<h1>Oh No! We can't find the page you are looking for.</h1>
 
 </div>
 

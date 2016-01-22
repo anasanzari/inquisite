@@ -1,5 +1,7 @@
 $font-mdi   : 'Material-Design-Icons';
 $mdi-prefix : 'mdi-';
+$icons-font-path: "../font/md/" !default;
+
 
 @font-face {
     font-family: "#{$font-mdi}";
@@ -7,7 +9,7 @@ $mdi-prefix : 'mdi-';
         url("#{$icons-font-path}#{$font-mdi}.woff2") format("woff2"),
         url("#{$icons-font-path}#{$font-mdi}.woff") format("woff"),
         url("#{$icons-font-path}#{$font-mdi}.ttf") format("truetype"),
-        url("#{$icons-font-path}#{$font-mdi}.svg##{$font-mdi}") format("svg");
+        url("#{$icons-font-path}#{$font-mdi}.svg") format("svg");
     font-weight: normal;
     font-style: normal;
 }

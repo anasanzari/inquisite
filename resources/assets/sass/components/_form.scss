@@ -1,4 +1,7 @@
 /* Remove Focus Boxes */
+
+$base_fontsize : 1rem;
+
 select:focus {
   outline: 1px solid lighten($secondary-color, 47%);
 }
@@ -55,7 +58,7 @@ textarea.materialize-textarea {
   height: 3rem;
   width: 100%;
 
-  font-size: 1rem;
+  font-size: $base_fontsize;
   margin: 0 0 15px 0;
   padding: 0;
   box-shadow: none;
@@ -251,7 +254,7 @@ textarea {
   display: inline-block;
   height: 25px;
   line-height: 25px;
-  font-size: 1rem;
+  font-size: $base_fontsize;
   @include transition(.28s ease);
 
   -webkit-user-select: none; /* webkit (safari, chrome) browsers */
@@ -616,7 +619,7 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
 
 .select-wrapper {
   position: relative;
-
+  margin-bottom: 30px;
   input.select-dropdown {
     position: relative;
     cursor: pointer;
@@ -628,7 +631,7 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     height: 3rem;
     line-height: 3rem;
     width: 100%;
-    font-size: 1rem;
+    font-size: $base_fontsize;
     margin: 0 0 15px 0;
     padding: 0;
     display: block;

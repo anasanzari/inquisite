@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('FbUserSeeder');
 		$this->call('StickerSeeder');
 		$this->call('StoriesTableSeeder');
+		$this->call('UserSeeder');
 
 		Model::reguard();
 	}

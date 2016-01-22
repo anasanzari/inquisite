@@ -8,13 +8,23 @@ use App\Photo;
 
 class PhotosController extends Controller {
 
+	public function __construct(){
+		$this->middleware('auth',['except'=>['index']]);
+	}
+
 	function index(){
 		$photos = Photo::paginate(5);  //DB::table('photos')->paginate(6);
+		$photos->setPath('photoclix');
 		return view('photoclix.index', ['photos' => $photos]);
 	}
 
 	function upload(){
 		return view('photoclix.photo_upload');
+	}
+
+	function all(){
+		$photos = Photo::all();
+		return view('photoclix.admin_list',['photos'=>$photos]);
 	}
 
 	function newupload(Request $request){
