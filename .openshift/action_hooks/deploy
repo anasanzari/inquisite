@@ -4,12 +4,6 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
 
-
-        echo 'Updating Composer'
-        php $OPENSHIFT_DATA_DIR/composer.phar -q --no-ansi self-update
-
-
-
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 set -e
