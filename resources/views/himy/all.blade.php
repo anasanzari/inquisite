@@ -9,18 +9,9 @@
 
 <div class="himbg"></div>
 <div class="row container himy">
-    <div class="transbar">
-        <h1 class="shadow">How I met you!</h2>
-        <p class="shadow">Whom did you first meet from NITC ? <br/>
-                Do you have an interesting story about your meeting?
-        </p>
-        <div>
-            <a href="{{url('himy/login')}}" class="btn-large waves-effect">Create Your Story!</a>
-        </div>
-    </div>
 
     <div class="list">
-        <h2 class="shadow" style="padding-left:25px">Recent Stories Created</h2>
+        <h3 class="shadow" style="padding-left:25px">Stories</h3>
 
         <ul class="collection" id="collection">
           @foreach($stories as $story)
@@ -35,7 +26,9 @@
           @endforeach
         </ul>
 
-        <a href="{{url('himy/stories')}}" class="btn-large waves-effect">See All Stories</a>
+        <div class="transwh center">
+          @include('includes.pagination', ['paginator' => $stories])
+        </div>
 
     </div>
 

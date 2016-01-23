@@ -34,4 +34,10 @@ return [
 		'secret' => '',
 	],
 
+	'facebook' => [
+    'client_id' => '148666522131344',
+    'client_secret' => 'fda40ebf503fb781dee9e3bbdcf82838',
+    'redirect' => 'http://localhost/Openshift/inquisite/public/himy/fblogin/callback',
+	],
+
 ];

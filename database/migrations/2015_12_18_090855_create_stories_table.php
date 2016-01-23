@@ -17,8 +17,7 @@ class CreateStoriesTable extends Migration {
 	{
 		$table->increments('id');
 		$table->string('userid',15);
-		$table->string('person',50);
-		$table->string('place',100);
+		$table->string('person',70);
 		$table->integer('stickerid')->unsigned()->nullable();
 		$table->text('content');
 		$table->foreign('stickerid')->references('id')->on('stickers')->onDelete('set null');

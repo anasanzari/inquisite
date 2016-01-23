@@ -14,7 +14,7 @@ class AddforeignkeyStories extends Migration {
 	{
 		//
 		Schema::table('stories', function ($table){
-		    $table->foreign('userid')->references('id')->on('fb_users');
+		    $table->foreign('userid')->references('fbid')->on('fb_users');
 		});
 	}
 

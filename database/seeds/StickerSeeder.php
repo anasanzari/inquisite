@@ -11,9 +11,13 @@ class StickerSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('stickers')->insert([
+          'id' => 0,
+          'url' => ""
+        ]);
         for($i=1;$i<10;$i++){
           DB::table('stickers')->insert([
-            'url' => url("http://localhost/Openshift/inquisite/public/uploads/stickers/$i.jpg") // this is weird the url function doesn't seem to work properly here
+            'url' => "uploads/stickers/$i.png" // this is weird the url function doesn't seem to work properly here
           ]);
         }
 

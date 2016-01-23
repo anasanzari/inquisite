@@ -15,11 +15,6 @@
             <div class="card-content">
               <span class="title">{{$article->name}}</span>
               <span class="sub-title">{{$article->author}}</span>
-              <div class="content">
-              <!--ar = explode('<p>',article->getArticle()); -->
-                 {{$article->getArticle}}
-              <!--?=substr(ar[1], 0,50)."...";?-->
-              </div>
               <a href="{{url('articles/'.$article->id)}}" class="waves-effect waves-light btn">Read More</a>
             </div>
           </div>

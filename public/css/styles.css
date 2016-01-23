@@ -8690,7 +8690,7 @@ body.launch {
   background-image: url(../images/icons/ic_info.png); }
 
 /*articles page */
-.fixedbg, .articlesbg, .himbg, .adminbg, .articleitembg, .interviewbg {
+.fixedbg, .articlesbg, .himbg, .adminbg, .articleitembg, .interviewbg, .photoclixbg {
   position: fixed;
   top: 0;
   left: 0;
@@ -8738,7 +8738,9 @@ body.launch {
     display: block; }
   .articles .sub-title {
     font-size: 1.2rem;
-    color: #ee374d; }
+    color: #ee374d;
+    padding-bottom: 5px;
+    display: block; }
   .articles .content {
     font-size: 1rem;
     color: #000; }
@@ -8773,6 +8775,9 @@ body.launch {
       font-size: 1.7em; }
 
 /* photoclix */
+.photoclixbg {
+  background-image: url(../images/4.png); }
+
 .photoclix {
   padding-top: 75px;
   min-height: 400px;
@@ -8860,6 +8865,42 @@ body.launch {
       padding: 25px; }
     .himy .transbar p {
       font-size: 1.5rem; }
+  .himy .list .collection {
+    border: none; }
+    .himy .list .collection .collection-item {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .himy .list .blur-me {
+    filter: blur(20px); }
+  .himy .list .av-img {
+    height: 75px;
+    width: 75px;
+    margin-top: 15px;
+    margin-right: 10px; }
+  .himy .transwh {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 3px; }
+    .himy .transwh .pagination {
+      padding: 2px 0px; }
+  .himy .transbar-white {
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+    padding-top: 20px; }
+    .himy .transbar-white p {
+      font-size: 1.5rem;
+      font-family: mainfont;
+      text-align: justify;
+      font-style: italic;
+      padding: 20px; }
+  .himy .av-img {
+    height: 75px;
+    width: 75px;
+    background-color: rgba(0, 0, 0, 0.1); }
+  .himy .stickercol:hover {
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 5px;
+    cursor: pointer; }
   .himy .storyform {
     background: rgba(255, 255, 255, 0.95);
     color: #000;

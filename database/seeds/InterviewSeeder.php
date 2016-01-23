@@ -11,10 +11,6 @@ class InterviewSeeder extends Seeder
      */
     public function run()
     {
-        //
-        DB::table('interviews')->insert([
-          'person' => 'Some One',
-          'content' => 'One||@||Hello there||Q||Checking if works fine!||@||Yes it does'
-        ]);
+        
     }
 }

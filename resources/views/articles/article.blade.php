@@ -4,12 +4,11 @@
 
 <meta property="og:title" content="{{$article->name}}" />
 <meta property="og:site_name" content="inquisite.istenitc.org"/>
-<meta property="og:url" content="http://inquisite.istenitc.org/articles/article.php?id={{$article->id}}"/>
+<meta property="og:url" content="{{url('interviews/'.$article->id)}}"/>
 <meta property="og:description" content="Read the articles from new edition of inquisite." />
 <meta property="og:type" content="article" />
 <meta property="fb:app_id" content="148666522131344" />
-<meta property="og:image" content="http://inquisite.istenitc.org/images/aug.jpg">
-
+<meta property="og:image" content="{{url('images/ar.jpg')}}">
 
 @endsection
 
@@ -39,7 +38,7 @@
 $("#sharebtn").click(function(){
 FB.ui({
  method: 'share',
- href: 'http://inquisite.istenitc.org/articles/article.php?id={{$article->id}}'
+ href: '{{url('interviews/'.$article->id)}}'
  }, function(response){});
 });
 

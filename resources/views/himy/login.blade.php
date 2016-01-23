@@ -18,7 +18,7 @@
                   Share your story of how you met people!
               </p>
               <div style="padding:25px">
-                  <a href="" id="login" class="btn-large waves-effect">Login with Facebook</a>
+                  <a href="{{url('himy/fblogin')}}" id="login" class="btn-large waves-effect">Login with Facebook</a>
               </div>
       </div>
   </div>

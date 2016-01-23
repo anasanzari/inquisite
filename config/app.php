@@ -145,6 +145,8 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+		'Laravel\Socialite\SocialiteServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
 
 	],
 
@@ -195,6 +197,8 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
 		'Form'      => 'Illuminate\Html\FormFacade',
+		'Socialite' => 'Laravel\Socialite\Facades\Socialite',
+		'Image' => 'Intervention\Image\Facades\Image'
 
 	],
 

@@ -11,11 +11,7 @@ class FbUserSeeder extends Seeder
      */
     public function run()
     {
-        //
-          DB::table('fb_users')->insert([
-            'id' => '4',
-            'name' => 'Mark Zuckerberg',
-          ]);
+      
 
     }
 }

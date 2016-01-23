@@ -20,6 +20,14 @@ class InterviewController extends Controller {
 		return view('interview.index',['interviews' => $interviews]);
 	}
 
+	function show($id){
+		$interview = Interview::findOrFail($id);
+		$interview->content = json_decode($interview->content,true);
+		return view('interview.show',['interview' => $interview]);
+	}
+
+
+
 	function all(){
 		$interviews = Interview::all();
 		return view('interview.admin_list',['interviews'=>$interviews]);

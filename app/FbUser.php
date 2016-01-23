@@ -7,7 +7,7 @@ class FbUser extends Model {
 	//
 	public $timestamps = false;
 	protected $table = 'fb_users';
-	protected $fillable = ['id','name'];
+	protected $fillable = ['fbid','name'];
 
 	public function stories()
 	 {

@@ -217,6 +217,8 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
   .sub-title{
       font-size: 1.2rem;
       color:#ee374d;
+      padding-bottom: 5px;
+      display: block;
   }
   .content{
       font-size: 1rem;
@@ -266,6 +268,11 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
 }
 
 /* photoclix */
+
+.photoclixbg{
+  @extend .fixedbg;
+  background-image: url(../images/4.png);
+}
 
 .photoclix{
   padding-top: 75px;
@@ -389,6 +396,63 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
     p{
       font-size: 1.5rem;
     }
+  }
+
+  .list{
+    .collection {
+      border: none;
+      .collection-item{
+          background: rgba(255,255,255,.8);
+          color: #000;
+          border-bottom: 1px solid rgba(0,0,0,.1);
+      }
+    }
+
+
+
+    .blur-me {
+        filter: blur(20px);
+    }
+
+    .av-img{
+        height:75px;
+        width: 75px;
+        margin-top: 15px;
+        margin-right:10px;
+    }
+  }
+
+  .transwh{
+    background: rgba(255,255,255,.95);
+    border-radius: 3px;
+    .pagination{
+      padding: 2px 0px;
+    }
+  }
+
+  .transbar-white{
+      background: rgba(255,255,255,.95);
+      color: #000;
+      padding-top: 20px;
+      p{
+        font-size: 1.5rem;
+        font-family: mainfont;
+        text-align: justify;
+        font-style: italic;
+        padding: 20px;
+      }
+  }
+
+  .av-img{
+      height:75px;
+      width: 75px;
+      background-color: rgba(0,0,0,.1);
+  }
+
+  .stickercol:hover{
+      background-color: rgba(200,200,200,.5);
+      border-radius: 5px;
+      cursor: pointer;
   }
 
   .storyform{

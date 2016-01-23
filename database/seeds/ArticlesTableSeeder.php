@@ -11,13 +11,6 @@ class ArticlesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
-        DB::table('articles')->insert([
-          'name' => 'Life Before Us',
-          'author' => 'Suhra Majeed',
-          'month' => 1,
-          'year' => 2016,
-          'content' => ''
-        ]);
+        
     }
 }

@@ -18,9 +18,13 @@ Route::get('interviews','InterviewController@index');
 Route::get('interviews/{id}','InterviewController@show');
 
 Route::get('himy','HimyController@index');
-Route::get('himy/stories','HimyController@all');
+Route::get('himy/stories','HimyController@listAll');
 Route::get('himy/login','HimyController@login');
 Route::get('himy/create','HimyController@create');
+Route::post('himy/create','HimyController@save');
+Route::get('himy/story/img/{id}','HimyController@img');
+Route::get('himy/story/{id}','HimyController@view');
+
 
 /* Administrator routes-- needs authentication */
 Route::get('dashboard','Dashboard\DashboardController@main');
@@ -55,3 +59,7 @@ Route::get('dashboard/interviews/{id}/delete','InterviewController@delete');
 Route::get('dashboard/himy','HimyController@all');
 Route::get('dashboard/himy/{id}','HimyController@show');
 Route::get('dashboard/himy/{id}/delete','HimyController@delete');
+
+/* facebook auth */
+Route::get('himy/fblogin', 'HimyController@redirectToProvider');
+Route::get('himy/fblogin/callback', 'HimyController@handleProviderCallback');

@@ -14,7 +14,7 @@
 @endsection
 
 @section('content')
-
+<div class="photoclixbg"></div>
  <div class="photoclix">
      <div class="row">
       @foreach($photos as $photo)

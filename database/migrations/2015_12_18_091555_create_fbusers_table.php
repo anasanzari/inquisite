@@ -15,9 +15,9 @@ class CreateFbusersTable extends Migration {
 		//
 		Schema::create('fb_users', function(Blueprint $table)
 	{
-		$table->string('id',15);
+		$table->string('fbid',15);
 		$table->string('name',50);
-		$table->primary('id');
+		$table->primary('fbid');
 
 	});
 	}
