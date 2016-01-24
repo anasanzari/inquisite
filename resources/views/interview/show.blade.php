@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('meta')
-<meta property="og:title" content="interview with {{$interview->person}}" />
+<meta property="og:title" content="Interview with {{$interview->person}}" />
 <meta property="og:site_name" content="inquisite.istenitc.org"/>
 <meta property="og:url" content="{{url('interviews/'.$interview->id)}}"/>
 <meta property="og:description" content="Read interesting interviews." />

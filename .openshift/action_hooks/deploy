@@ -12,6 +12,29 @@ echo 1>&2
 echo "Setting environment variables..." 1>&2
 
 export APP_ENV="${APPLICATION_ENV:-production}"
+
+echo 1>&2
+echo "Migrating public uploaded files..." 1>&2
+echo 1>&2
+
+if [ ! -d ${OPENSHIFT_DATA_DIR}uploads ]; then
+  mv -uf ${OPENSHIFT_REPO_DIR}public/uploads ${OPENSHIFT_DATA_DIR}
+fi
+
+echo 1>&2
+echo "Deleting existing uploads folder..." 1>&2
+echo 1>&2
+
+#delete folders
+rm -Rf ${OPENSHIFT_REPO_DIR}public/uploads
+
+echo 1>&2
+echo "linking uploads folder..." 1>&2
+echo 1>&2
+
+#link upload folders
+ln -sf ${OPENSHIFT_DATA_DIR}uploads   ${OPENSHIFT_REPO_DIR}public
+
 if [[ "${APPLICATION_ENV:-}" != "development" ]]; then
   export APP_DEBUG=false
 else
