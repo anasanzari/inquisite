@@ -63,10 +63,11 @@ class HimyController extends Controller {
 			$img = Image::make(url('images/himy.jpg'));
 			$fb = Image::make(url('images/himy/s.jpg'));
 			$img->insert($fb,'top-left',525,240);
-
-			$img->text($story->user->name." met ".$story->person, 600, 400, function($font) {
+			$text = $story->user->name." met ".$story->person;
+	
+			$img->text($text, 600, 400, function($font) {
 			    $font->file(public_path('font/champagne.ttf'));
-			    $font->size(40);
+			    $font->size(70);
 			    $font->color('#ffffff');
 			    $font->align('center');
 			    $font->valign('center');
