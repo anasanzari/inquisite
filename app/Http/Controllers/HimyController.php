@@ -112,7 +112,10 @@ class HimyController extends Controller {
 			return redirect('himy/login');
 		}
 
-		function login(){
+		function login(Request $request){
+			if($request->session()->has('fbid')){
+				return redirect('himy/create');
+			}
 			return view('himy.login');
 		}
 

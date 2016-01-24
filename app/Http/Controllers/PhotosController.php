@@ -14,7 +14,7 @@ class PhotosController extends Controller {
 	}
 
 	function index(){
-		$photos = Photo::paginate(5);  //DB::table('photos')->paginate(6);
+		$photos = Photo::paginate(8);  //DB::table('photos')->paginate(6);
 		$photos->setPath('photoclix');
 		return view('photoclix.index', ['photos' => $photos]);
 	}

@@ -5,7 +5,7 @@
 
 <div class="articlesbg"></div>
 <div class="row container articles">
-    <h1 class="shadow transbar">August Edition</h1>
+    <h1 class="shadow transbar">{{$month}} Edition</h1>
     <h3 class="shadow whitetext">Contents</h3>
 
     <div class="row">

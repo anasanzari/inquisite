@@ -8620,6 +8620,10 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 * {
   font-family: asper; }
 
+.dropdown-button {
+  margin-top: 7px;
+  margin-left: 5px; }
+
 input, label, .collapsible-header, .collapsible-body p, textarea {
   font-family: mainfont; }
 
@@ -8745,9 +8749,6 @@ body.launch {
     font-size: 1rem;
     color: #000; }
 
-.article .img {
-  text-align: center; }
-
 /* article item page */
 .article-item {
   padding-top: 75px;
@@ -8764,15 +8765,27 @@ body.launch {
     padding-left: 50px; }
   .article-item .article {
     color: #eee;
-    min-height: 500px; }
-    .article-item .article h1, .article-item .article h2, .article-item .article h3 {
-      color: #eee; }
+    min-height: 500px;
+    text-align: center; }
+    .article-item .article h1, .article-item .article h2, .article-item .article h3, .article-item .article h4, .article-item .article h5, .article-item .article h6, .article-item .article ul li {
+      color: #eee;
+      text-align: left; }
     .article-item .article h1 {
-      font-size: 2.1em; }
+      font-size: 3em; }
     .article-item .article h2 {
-      font-size: 1.9em; }
+      font-size: 2.5em;
+      padding-left: 2px; }
     .article-item .article h3 {
-      font-size: 1.7em; }
+      font-size: 2rem;
+      padding-left: 4px; }
+    .article-item .article p, .article-item .article ul li {
+      font-size: 1.5rem; }
+    .article-item .article p {
+      text-align: justify;
+      padding-left: 7px; }
+    .article-item .article img {
+      text-align: center;
+      padding: 7px 0px; }
 
 /* photoclix */
 .photoclixbg {
@@ -8782,11 +8795,21 @@ body.launch {
   padding-top: 75px;
   min-height: 400px;
   color: #fff; }
+  .photoclix .imgcont img {
+    height: 200px; }
+  .photoclix .imgcont p {
+    font-size: 1.5rem;
+    color: #000; }
+  .photoclix .thebox:hover {
+    cursor: pointer; }
   .photoclix .row {
     text-align: center; }
     .photoclix .row > div {
       text-align: center; }
 
+@media screen and (max-width: 600px) {
+  .photoclix .imgcont img {
+    height: 150px; } }
 /* interview */
 .interview {
   padding-top: 75px;
@@ -8878,6 +8901,8 @@ body.launch {
     width: 75px;
     margin-top: 15px;
     margin-right: 10px; }
+  .himy .list .right {
+    max-width: 90px; }
   .himy .transwh {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 3px; }
@@ -8926,6 +8951,10 @@ nav ul a {
   .admin .collection .collection-item {
     color: #000;
     font-size: 1.5rem; }
+  .admin .collapsible {
+    color: #000; }
+    .admin .collapsible .collapsible-body {
+      background-color: #eeeeee; }
   .admin form {
     padding-top: 25px;
     padding-bottom: 50px; }

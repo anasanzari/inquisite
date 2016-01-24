@@ -50,6 +50,11 @@
     font-family: asper;
 }
 
+.dropdown-button{
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
 input,label,.collapsible-header,.collapsible-body p,textarea{
   font-family: mainfont;
 }
@@ -226,9 +231,7 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
   }
 }
 
-.article .img{
-    text-align: center;
-}
+
 
 /* article item page */
 
@@ -252,17 +255,33 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
   .article{
     color:#eee;
     min-height: 500px;
-    h1,h2,h3{
+    text-align: center;
+    h1,h2,h3,h4,h5,h6,ul li{
         color: #eee;
+        text-align: left;
     }
     h1{
-      font-size: 2.1em;
+      font-size: 3em;
     }
     h2{
-       font-size: 1.9em;
+       font-size: 2.5em;
+       padding-left: 2px;
     }
     h3{
-        font-size: 1.7em;
+        font-size: 2rem;
+        padding-left: 4px;
+    }
+    p,ul li{
+      font-size: 1.5rem;
+
+    }
+    p{
+      text-align: justify;
+      padding-left: 7px;
+    }
+    img{
+        text-align: center;
+        padding: 7px 0px;
     }
   }
 }
@@ -278,10 +297,33 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
   padding-top: 75px;
   min-height: 400px;
   color:#fff;
+  .imgcont{
+    img{
+      height:200px;
+    }
+    p{
+      font-size: 1.5rem;
+      color:#000;
+    }
+  }
+  .thebox:hover{
+      cursor: pointer;
+  }
   .row{
     text-align: center;
     >div{
       text-align: center;
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .photoclix{
+    .imgcont{
+      img{
+        height:150px;
+      }
     }
   }
 }
@@ -420,6 +462,9 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
         margin-top: 15px;
         margin-right:10px;
     }
+    .right{
+      max-width: 90px;
+    }
   }
 
   .transwh{
@@ -492,6 +537,12 @@ nav ul a{
     .collection-item{
       color:#000;
       font-size: 1.5rem;
+    }
+  }
+  .collapsible{
+    color: #000;
+    .collapsible-body{
+      background-color: #eeeeee;
     }
   }
   form{

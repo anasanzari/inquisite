@@ -16,7 +16,6 @@
 			</div>
 			<div class="input-field col s12">
 				<button type="submit" class="btn btn-primary">Login</button>
-				<a href="{{url('auth/register')}}" class="btn btn-primary">Register</a>
 			</div>
 			</form>
 	</div>

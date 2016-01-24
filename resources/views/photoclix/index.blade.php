@@ -16,15 +16,21 @@
 @section('content')
 <div class="photoclixbg"></div>
  <div class="photoclix">
-     <div class="row">
-      @foreach($photos as $photo)
-          <div class="col s6 m3 l3">
-            <img class="responsive-img  thebox" src="{{url($photo->link)}}">
-            <p style="color:black"><b>{{ $photo->name }}</b>
-               by {{ $photo->user }}</p>
-         </div>
+      @foreach($photos as $key => $photo)
+        @if($key%4==0)
+          <div class="row">
+        @endif
+            <div class="col s6 m3 l3">
+                <div class="imgcont">
+                  <img class="responsive-img  thebox" src="{{url($photo->link)}}">
+                  <p class="hide-on-small-only"><b>{{ $photo->name }}</b>
+                     by {{ $photo->user }}</p>
+                </div>
+             </div>
+         @if($key%4==3)
+          </div>
+        @endif
       @endforeach
-     </div>
  </div>
 
  @include('includes.pagination', ['paginator' => $photos])

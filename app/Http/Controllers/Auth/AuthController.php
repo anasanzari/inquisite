@@ -20,6 +20,17 @@ class AuthController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+	public function getRegister()
+	{
+		return redirect("home");
+	}
+
+
+	public function postRegister(Request $request)
+	{
+		return redirect("home");
+	}
+
 	protected $redirectTo = "/dashboard";
 
 	/**

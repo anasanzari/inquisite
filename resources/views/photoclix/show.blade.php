@@ -15,7 +15,7 @@
             <h1 class="shadow">{{$photo->name}}</h2>
             <h3 class="shadow whitetext">{{$photo->user}}</h3>
             <div class="article" id="#article">
-              <img src="{{ url('/').'/'.$photo->link }}">
+              <img class="responsive-img" src="{{ url('/').'/'.$photo->link }}">
             </div>
 </div>
 @stop

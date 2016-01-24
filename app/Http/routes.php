@@ -3,6 +3,7 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::post('home/feed', 'HomeController@feedback');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -28,15 +29,17 @@ Route::get('himy/story/{id}','HimyController@view');
 
 /* Administrator routes-- needs authentication */
 Route::get('dashboard','Dashboard\DashboardController@main');
+Route::get('dashboard/feedback','Dashboard\DashboardController@feeds');
+
 Route::get('dashboard/articles','ArticlesController@listAll');
 Route::get('dashboard/articles/create','ArticlesController@create');
 Route::post('dashboard/articles/create','ArticlesController@savenew');
 
-Route::get('dashboard/articles/id/{id}','ArticlesController@get');
-Route::get('dashboard/articles/id/{id}/edit','ArticlesController@edit');
-Route::get('dashboard/articles/id/{id}/delete','ArticlesController@delete');
-Route::post('dashboard/articles/id/{id}','ArticlesController@save');
-Route::get('dashboard/articles/{year}/{month}','ArticlesController@listEdition');
+Route::get('dashboard/articles/{id}','ArticlesController@get');
+Route::get('dashboard/articles/{id}/edit','ArticlesController@edit');
+Route::get('dashboard/articles/{id}/delete','ArticlesController@delete');
+Route::post('dashboard/articles/{id}','ArticlesController@save');
+Route::get('dashboard/articleedition/{year}/{month}','ArticlesController@listEdition');
 
 Route::get('dashboard/photoclix','PhotosController@all');
 Route::get('dashboard/photoclix/upload','PhotosController@upload');

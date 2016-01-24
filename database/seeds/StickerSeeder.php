@@ -15,9 +15,9 @@ class StickerSeeder extends Seeder
           'id' => 0,
           'url' => ""
         ]);
-        for($i=1;$i<10;$i++){
+        for($i=1;$i<49;$i++){
           DB::table('stickers')->insert([
-            'url' => "uploads/stickers/$i.png" // this is weird the url function doesn't seem to work properly here
+            'url' => "images/stickers/$i.png" // this is weird the url function doesn't seem to work properly here
           ]);
         }
 

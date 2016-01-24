@@ -12,7 +12,7 @@
 
   <div class="collection">
     @foreach($articles as $article)
-      <a href="{{url('dashboard/articles/'.$article->year.'/'.$article->month->format('m'))}}" class="collection-item">
+      <a href="{{url('dashboard/articleedition/'.$article->year.'/'.$article->month->format('m'))}}" class="collection-item">
         {{$article->year}} {{$article->month->format('F')}}
       </a>
     @endforeach

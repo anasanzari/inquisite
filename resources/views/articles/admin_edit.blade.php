@@ -13,7 +13,7 @@
 
   @include('errors.errorlist',['err'=>$errors])
 
-  {!! Form::open(['url' => url('dashboard/articles/id/'.$article->id)]) !!}
+  {!! Form::open(['url' => url('dashboard/articles/'.$article->id)]) !!}
     <div class="input-field col s12">
       <input name="name" type="text" class="validate" value="{{$article->name}}">
       <label>Name</label>

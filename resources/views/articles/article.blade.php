@@ -24,7 +24,7 @@
              <h1 class="shadow">{{$article->name}}</h2>
              <h3 class="shadow whitetext">{{$article->author}}</h3>
              <div class="article" id="#article">
-                 {{$article->content}}
+                 {!!$article->content!!}
              </div>
 </div>
 

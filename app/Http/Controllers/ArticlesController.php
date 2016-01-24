@@ -14,11 +14,13 @@ class ArticlesController extends Controller {
 	}
 
 	function all(){
-		$articles = Article::all();
-		return view('articles.articles',['articles'=>$articles]);
+		$articles = Article::where('year',2016)->where('month',1)->get();
+		$month = Carbon::parse('2010/01/01')->format('F');
+		return view('articles.articles',['articles'=>$articles,'month'=>$month]);
 	}
 	function show($id){
 		$article = Article::find($id);
+		$article->content = str_replace("images/articles",url("images/articles"),$article->content);
 		return view('articles.article',['article'=>$article]);
 	}
 
@@ -60,6 +62,7 @@ class ArticlesController extends Controller {
 
 	function get($id){
 		$article = Article::find($id);
+		$article->content = str_replace("images/articles",url("images/articles"),$article->content);
 		return view('articles.admin_get',['article'=>$article]);
 	}
 	function delete($id){
@@ -83,7 +86,7 @@ class ArticlesController extends Controller {
 			'content' => 'required'
 		]);
 		if ($validator->fails()) {
-					 return redirect('dashboard/articles/id/'.$id.'/edit')
+					 return redirect('dashboard/articles/'.$id.'/edit')
 											 ->withErrors($validator)
 											 ->withInput();
 		}
@@ -95,7 +98,7 @@ class ArticlesController extends Controller {
 		$article->month = $request['month'];
 		$article->content = $request['content'];
 		$article->save();
-		return redirect('dashboard/articles/id/'.$id);
+		return redirect('dashboard/articles/'.$id);
 
 	}
 

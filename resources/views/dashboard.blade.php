@@ -26,6 +26,7 @@
             <img src="{{url('images/nav_logo.png')}}" style="width:30px">Inquisite Admin
           </a>
 	      <ul id="nav-mobile" class="right hide-on-small-only">
+					<li><a href="{{url('dashboard/feedback')}}">Feeds</a></li>
 	        <li><a href="{{url('dashboard/articles')}}">Articles</a></li>
 	        <li><a href="{{url('dashboard/photoclix')}}">Photoclix</a></li>
 	        <li><a href="{{url('dashboard/interviews')}}">Interviews</a></li>

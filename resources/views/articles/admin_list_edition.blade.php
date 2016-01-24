@@ -12,7 +12,7 @@
 
   <div class="collection">
     @foreach($articles as $article)
-      <a href="{{url('dashboard/articles/id/'.$article->id)}}" class="collection-item">
+      <a href="{{url('dashboard/articles/'.$article->id)}}" class="collection-item">
         {{$article->name}}
       </a>
     @endforeach

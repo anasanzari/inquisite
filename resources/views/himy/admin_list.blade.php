@@ -8,7 +8,7 @@
 <div class="adminbg"></div>
 <div class="admin">
 <div class="row container">
-  <h3>Photos</h3>
+  <h3>Stories</h3>
 
   <div class="collection">
     @foreach($story as $story)

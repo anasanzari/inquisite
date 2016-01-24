@@ -4,8 +4,8 @@
 
 <div class="mainheader">
 
- <h1>August is here!</h1>
- <a class="btn" href="./articles">Read August Edition</a>
+ <h1>Inquisite</h1>
+ <a class="btn" href="./articles">Read New Edition</a>
 </div>
 
 <div class="row writer">
@@ -23,7 +23,7 @@
 				 </li>
 				 <li>
 						 <div class="collapsible-header"><i class="icon icon-contact"></i>Contact Us</div>
-						 <div class="collapsible-body"><p>You can contact us at +91 9***958875</p></div>
+						 <div class="collapsible-body"><p>You can contact us at +91 9567212875r</p></div>
 				 </li>
 				 <li>
 						 <div class="collapsible-header"><i class="icon icon-info"></i>Info</div>
@@ -39,7 +39,8 @@
 		 <h4>We would like to hear what you have to tell about us!</h4>
  </div>
  <div class="col s12 m6">
-		 <form id="feedform">
+
+       {!! Form::open(['url' => url('home/feed'),'id'=>"feedform"]) !!}
 				 <div class="row" style="padding-top: 20px;text-align: center">
 						 <div class="input-field col s12">
 								<input type="text" name="name" class="validate">
@@ -55,7 +56,6 @@
 						</div>
 
 						 <button class="btn">Send</button>
-
 				 </div>
 		 </form>
  </div>
@@ -70,19 +70,20 @@
  $('.dropdown-button').dropdown({
 		 inDuration: 300,
 		 outDuration: 225,
-		 constrain_width: false, // Does not change width of dropdown to that of the activator
-		 hover: false, // Activate on hover
-		 gutter: 0, // Spacing from edge
-		 belowOrigin: false // Displays dropdown below the button
+		 constrain_width: false,
+		 hover: false,
+		 gutter: 0,
+		 belowOrigin: false
 	 }
  );
 
  $('#feedform').submit(function (){
 	 Materialize.toast('Sending feed..',1000);
 	 var data =  $(this).serialize();
-	 $.post("./feed.php",data,function(res){
-			 var val = JSON.parse(res);
-			 if(val.status == "success"){
+	 $.post("{{url('home/feed')}}",data,function(res){
+       console.log(res);
+			 //var val = JSON.parse(res);
+			 if(res.status == "success"){
 						Materialize.toast('Your feed is recieved.', 3000)
 			 }else{
 						Materialize.toast('Sorry.Something went wrong!', 1000)
