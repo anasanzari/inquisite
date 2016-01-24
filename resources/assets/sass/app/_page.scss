@@ -363,7 +363,10 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
       margin-bottom: 5px;
       margin-top: -5px;
   }
-
+  .introp{
+    font-size: 1.5rem;
+    text-align: justify;
+  }
 
   .collection {
       border: none;
@@ -371,6 +374,7 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
       background: none;
 
 
+      $reply : rgb(114, 215, 212);
 
       .collection-item{
           border: none;
@@ -402,6 +406,7 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
           }
           .bubble-right{
              padding-right: 15px;
+             background-color:$reply;
           }
           .bubble-right::before{
               content: "";
@@ -410,7 +415,7 @@ text-shadow: 4px 4px 3px rgba(0,0,0,.9);
               right:-10px;
               width: 0;
               height: 0;
-              border: 10px solid #eee;
+              border: 10px solid $reply;
               border-right-color: transparent;
               border-bottom-color: transparent;
 

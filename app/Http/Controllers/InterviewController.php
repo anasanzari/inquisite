@@ -59,6 +59,7 @@ class InterviewController extends Controller {
       $values = $request->all();
       $i->person = $values['person'];
       $i->content = $values['content'];
+			$i->intro = $values['intro'];
       $i->save();
       return $i;
   }

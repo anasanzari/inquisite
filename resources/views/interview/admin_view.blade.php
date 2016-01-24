@@ -13,6 +13,7 @@
         <a href="{{url('dashboard/interviews/'.$interview->id.'/delete')}}" class="waves-effect waves-light btn">Delete</a>
     </div>
       <h1 class="shadow">{{$interview->person}}</h1>
+      <p class="introp">{{$interview->intro}}</p>
       <ul class="collection">
         @if($interview->content)
           @foreach($interview->content as $item)

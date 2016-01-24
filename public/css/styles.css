@@ -8835,6 +8835,9 @@ body.launch {
   .interviewitem .right {
     margin-bottom: 5px;
     margin-top: -5px; }
+  .interviewitem .introp {
+    font-size: 1.5rem;
+    text-align: justify; }
   .interviewitem .collection {
     border: none;
     color: #000;
@@ -8864,7 +8867,8 @@ body.launch {
         border-radius: 10px;
         position: relative; }
       .interviewitem .collection .collection-item .bubble-right {
-        padding-right: 15px; }
+        padding-right: 15px;
+        background-color: #72d7d4; }
       .interviewitem .collection .collection-item .bubble-right::before {
         content: "";
         position: absolute;
@@ -8872,7 +8876,7 @@ body.launch {
         right: -10px;
         width: 0;
         height: 0;
-        border: 10px solid #eee;
+        border: 10px solid #72d7d4;
         border-right-color: transparent;
         border-bottom-color: transparent; }
 

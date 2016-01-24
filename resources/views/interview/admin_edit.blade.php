@@ -14,6 +14,9 @@
       <input placeholder="Interviewee" ng-model="person" type="text" class="validate">
     </div>
     <div class="input-field col s12">
+      <textarea class="materialize-textarea"  ng-model="intro" placeholder="Introduction"></textarea>
+    </div>
+    <div class="input-field col s12">
       <a ng-click="add()" class="btn-floating btn-small waves-effect"><i class="material-icons">add</i></a>
     </div>
 
@@ -73,6 +76,7 @@
           console.log(response);
           $scope.details = response.content;
           $scope.person = response.person;
+          $scope.intro = response.intro;
         });
         $scope.addnew = false;
         $scope.toEdit = 0;
@@ -106,6 +110,7 @@
         $scope.save = function(){
           var r = new InterviewResource();
           r.person = $scope.person;
+          r.intro = $scope.intro;
           var details = [];
           for (var i=0;i<$scope.details.length;i++) {
             var obj = $scope.details[i];

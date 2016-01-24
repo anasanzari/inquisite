@@ -21,6 +21,7 @@
           <a class="waves-effect waves-light btn-large" id="sharebtn">Share</a>
       </div>
       <h1 class="shadow">{{$interview->person}}</h1>
+      <p class="introp">{{$interview->intro}}</p>
       <ul class="collection">
         @if($interview->content)
           @foreach($interview->content as $item)

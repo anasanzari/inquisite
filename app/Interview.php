@@ -7,7 +7,7 @@ class Interview extends Model {
 	//
 	public $timestamps = false;
 	protected $table = 'interviews';
-	protected $fillable = ['person','content'];
+	protected $fillable = ['person','content','intro'];
 
 
 }

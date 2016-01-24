@@ -11,7 +11,7 @@
 <div class="row writer">
  <div class="col s12 m6">
 		 <h2>Are you a writer?</h2>
-		 <h4>We provide a platform to show your writing skills.</h4>
+		 <h4>We provide a platform to exhibit your writing skills.</h4>
  </div>
  <div class="col s12 m6">
 		 <h4>Send your articles.</h4>
@@ -36,7 +36,7 @@
 <div class="row writer">
  <div class="col s12 m6">
 		 <h2>Write to us.</h2>
-		 <h4>We would like to hear what you have to tell about us!</h4>
+		 <h4>We would like to hear from you.</h4>
  </div>
  <div class="col s12 m6">
 
@@ -52,7 +52,7 @@
 						 </div>
 						<div class="input-field col s12">
 								<textarea id="textarea1" name="feed" class="materialize-textarea"></textarea>
-								<label>Write your feedbacks..</label>
+								<label>Write your feedback</label>
 						</div>
 
 						 <button class="btn">Send</button>
