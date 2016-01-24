@@ -44,8 +44,8 @@
 		@yield('script')
 
 		<!-- footer --------------------------->
-		<footer class="page-footer"><div class="container"><div class="row"><div class="col l6 s12"><h5 class="white-text">ISTE NITC STUDENTS CHAPTER</h5><a href="http://www.istenitc.org" class="btn">Visit our home page</a> </div>
-		</div></div><div class="footer-copyright"><div class="container"> © 2016 ISTE NITC STUDENTS CHAPTER</div></div></footer>
+		<footer class="page-footer"><div class="container"><div class="row"><div class="col l6 s12"><h5 class="white-text">ISTE NITC STUDENTS' CHAPTER</h5><a href="http://www.istenitc.org" class="btn">Visit our home page</a> </div>
+		</div></div><div class="footer-copyright"><div class="container"> © 2016 ISTE NITC STUDENTS' CHAPTER</div></div></footer>
 
 
 
