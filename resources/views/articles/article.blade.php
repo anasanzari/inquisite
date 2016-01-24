@@ -40,7 +40,7 @@
 $("#sharebtn").click(function(){
 FB.ui({
  method: 'share',
- href: '{{url('interviews/'.$article->id)}}'
+ href: '{{url('articles/'.$article->id)}}'
  }, function(response){});
 });
 
