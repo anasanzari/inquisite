@@ -8,8 +8,9 @@
 <meta property="og:description" content="Read how people met people." />
 <meta property="og:type" content="article" />
 <meta property="fb:app_id" content="148666522131344" />
-<meta property="og:image" content="{{url('himy/story/img/'.$story->id)}}">
-
+<meta property="og:image" content="{{url('himy/story/img/'.$story->id)}}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 @endsection
 
 @section('content')
