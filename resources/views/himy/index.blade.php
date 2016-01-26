@@ -1,5 +1,11 @@
 @extends('app')
 
+@section('optionallinks')
+@if($loggedin)
+  <li><a href="{{url('himy/fblogout')}}">Logout</a></li>
+@endif
+@endsection
+
 @section('meta')
 
 

@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Keywords" content="Inquisite, Indian Society for Technical Education, ISTE, NITC, National Institute of Technology Calicut, Calicut">
+  <meta name="description" content="Online Magazine of Indian Society for Technical Education, NITC."/>
 
 	@yield('meta')
 
@@ -28,6 +30,7 @@
 	        <li><a href="{{url('photoclix')}}">Photoclix</a></li>
 	        <li><a href="{{url('interviews')}}">Interviews</a></li>
 	        <li><a href="{{url('himy')}}">HIMY</a></li>
+					@yield('optionallinks')
 	      </ul>
 	    </div>
 	  </nav>

@@ -43,7 +43,11 @@ class HimyController extends Controller {
 
 		function index(){
 			$story = Story::with('user','sticker')->orderBy('id','desc')->take(5)->get();
-			return view('himy.index',['stories'=>$story]);
+			$loggedin = false;
+			if(Session::has('fbid')){
+				$loggedin = true;
+			}
+			return view('himy.index',['stories'=>$story,'loggedin'=>$loggedin]);
 		}
 
 		function logout(){
@@ -88,9 +92,13 @@ class HimyController extends Controller {
 		}
 
 		function listAll(){
-			$stories = Story::with('user','sticker')->orderBy('id','desc')->paginate(10);  //DB::table('photos')->paginate(6);
+			$stories = Story::with('user','sticker')->orderBy('id','desc')->paginate(15);  //DB::table('photos')->paginate(6);
 			$stories->setPath('');
-			return view('himy.all', ['stories' => $stories]);
+			$loggedin = false;
+			if(Session::has('fbid')){
+				$loggedin = true;
+			}
+			return view('himy.all', ['stories' => $stories,'loggedin'=>$loggedin]);
 		}
 
 		function save(Request $request){
@@ -114,7 +122,8 @@ class HimyController extends Controller {
 				$id = Session::get('fbid');
 				$u = FbUser::where('fbid',$id)->first();
 				$stickers = Sticker::where('id','>','1')->get();
-				return view('himy.create',['user'=>$u,'stickers'=>$stickers]);
+				$loggedin = true;
+				return view('himy.create',['user'=>$u,'stickers'=>$stickers,'loggedin'=>$loggedin]);
 			}
 			return redirect('himy/login');
 		}
@@ -127,11 +136,15 @@ class HimyController extends Controller {
 		}
 
 
-		public function view($id)
-		{
+		public function view($id){
+
+			$loggedin = false;
+			if(Session::has('fbid')){
+				$loggedin = true;
+			}
 			$story = Story::findorFail($id);
 			$story = Story::with('user','sticker')->where('id',$id)->first();
-			return view('himy.view',compact('story'));
+			return view('himy.view',['story'=>$story,'loggedin'=>$loggedin]);
 		}
 
 
@@ -139,8 +152,7 @@ class HimyController extends Controller {
 
 		function all(){
 			$story = Story::all();
-			$users = FbUser::all();
-			return view('himy.admin_list',['story'=>$story,'users'=>$users]);
+			return view('himy.admin_list',['story'=>$story]);
 		}
 
 

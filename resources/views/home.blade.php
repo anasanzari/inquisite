@@ -10,11 +10,11 @@
 
 <div class="row writer">
  <div class="col s12 m6">
-		 <h2>Are you a writer?</h2>
+		 <h2>Is there a write in you?</h2>
 		 <h4>We provide a platform to exhibit your writing skills.</h4>
  </div>
  <div class="col s12 m6">
-		 <h4>Send your articles.</h4>
+		 <h4>Send your entries</h4>
 
 		 <ul class="collapsible popout" data-collapsible="accordion">
 				 <li>
@@ -36,7 +36,7 @@
 <div class="row writer">
  <div class="col s12 m6">
 		 <h2>Write to us.</h2>
-		 <h4>We would like to hear from you.</h4>
+		 <h4>We would love to hear from you!</h4>
  </div>
  <div class="col s12 m6">
 

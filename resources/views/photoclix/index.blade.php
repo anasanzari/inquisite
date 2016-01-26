@@ -35,6 +35,8 @@
 
  @include('includes.pagination', ['paginator' => $photos])
 
+ <p style="text-align:center;padding-top:7px;font-size:2rem;">Send us your photos to istenitcmail@gmail.com</p>
+
 
 @endsection
 

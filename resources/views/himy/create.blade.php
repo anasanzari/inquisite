@@ -1,5 +1,13 @@
 @extends('app')
 
+
+@section('optionallinks')
+@if($loggedin)
+  <li><a href="{{url('himy/fblogout')}}">Logout</a></li>
+@endif
+@endsection
+
+
 @section('meta')
 
 
@@ -25,7 +33,7 @@
                 <label>Person you met</label>
             </div>
             <div class="input-field col s12">
-                <textarea id="textarea1" name="content" class="materialize-textarea lgtext"></textarea>
+                <textarea id="textarea1" name="content" class="materialize-textarea lgtext" required></textarea>
                 <label>Interesting story about your meeting</label>
             </div>
             <div class="center">
