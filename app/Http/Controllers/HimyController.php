@@ -12,6 +12,7 @@ use App\Sticker;
 use Auth;
 use File;
 use Intervention\Image\ImageManagerStatic as Image;
+use Session;
 
 class HimyController extends Controller {
 
@@ -32,7 +33,7 @@ class HimyController extends Controller {
 						if(!$u){
 							$u = FbUser::create(['name'=>$user->getName(),'fbid'=>$user->getId()]);
 						}
-						$request->session()->put('fbid', $u->fbid);
+						Session::put('fbid', $u->fbid);
 
 					return redirect('himy/create');
 		}
@@ -43,6 +44,11 @@ class HimyController extends Controller {
 		function index(){
 			$story = Story::with('user','sticker')->orderBy('id','desc')->take(5)->get();
 			return view('himy.index',['stories'=>$story]);
+		}
+
+		function logout(){
+			Session::flush();
+			return redirect('himy');
 		}
 
 
@@ -88,8 +94,8 @@ class HimyController extends Controller {
 		}
 
 		function save(Request $request){
-			if($request->session()->has('fbid')){
-				$id = $request->session()->get('fbid');
+			if(Session::has('fbid')){
+				$id = Session::get('fbid');
 
 				$story = new Story;
 				$story->userid = $id;
@@ -104,8 +110,8 @@ class HimyController extends Controller {
 		}
 
 		function create(Request $request){
-			if($request->session()->has('fbid')){
-				$id = $request->session()->get('fbid');
+			if(Session::has('fbid')){
+				$id = Session::get('fbid');
 				$u = FbUser::where('fbid',$id)->first();
 				$stickers = Sticker::where('id','>','1')->get();
 				return view('himy.create',['user'=>$u,'stickers'=>$stickers]);
@@ -114,7 +120,7 @@ class HimyController extends Controller {
 		}
 
 		function login(Request $request){
-			if($request->session()->has('fbid')){
+			if(Session::has('fbid')){
 				return redirect('himy/create');
 			}
 			return view('himy.login');

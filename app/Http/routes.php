@@ -66,3 +66,4 @@ Route::get('dashboard/himy/{id}/delete','HimyController@delete');
 /* facebook auth */
 Route::get('himy/fblogin', 'HimyController@redirectToProvider');
 Route::get('himy/fblogin/callback', 'HimyController@handleProviderCallback');
+Route::get('himy/fblogout', 'HimyController@logout');
