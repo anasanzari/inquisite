@@ -19,11 +19,15 @@
   </div>
 
   <h3>Users</h3>
-
-  <div class="collection">
+<div class="list">
+  <ul class="collection" id="collection">
     @foreach($users as $user)
-      <a class="collection-item">{{$user->fbid}} :: {{$user->name}}</a>
-    @endforeach
+    <li class="collection-item" style="padding-bottom:20px">
+      <img src="http://graph.facebook.com/{{$user->fbid}}/picture?height=40&width=40" alt="" class="av-img circle left">
+      {{$user->fbid}} :: {{$user->name}}
+      </li>
+      @endforeach
+    </ul>
   </div>
 
 
