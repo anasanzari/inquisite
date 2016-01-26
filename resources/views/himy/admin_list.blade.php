@@ -13,8 +13,16 @@
   <div class="collection">
     @foreach($story as $story)
       <a href="{{url('dashboard/himy/'.$story->id)}}" class="collection-item">
-        {{ $story->user()->first()->name }} : {{ $story->content }}
+        {{ $story->user()->first()->name }}
       </a>
+    @endforeach
+  </div>
+
+  <h3>Users</h3>
+
+  <div class="collection">
+    @foreach($users as $user)
+      <a class="collection-item">{{$user->fbid}} :: {{$user->name}}</a>
     @endforeach
   </div>
 

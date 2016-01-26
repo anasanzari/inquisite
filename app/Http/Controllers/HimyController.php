@@ -64,7 +64,7 @@ class HimyController extends Controller {
 			$fb = Image::make(url('images/himy/s.jpg'));
 			$img->insert($fb,'top-left',525,240);
 			$text = $story->user->name." met ".$story->person;
-	
+
 			$img->text($text, 600, 400, function($font) {
 			    $font->file(public_path('font/champagne.ttf'));
 			    $font->size(70);
@@ -133,7 +133,8 @@ class HimyController extends Controller {
 
 		function all(){
 			$story = Story::all();
-			return view('himy.admin_list',compact('story'));
+			$users = FbUser::all();
+			return view('himy.admin_list',['story'=>$story,'users'=>$users]);
 		}
 
 
