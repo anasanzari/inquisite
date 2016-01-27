@@ -27,7 +27,7 @@
                      by {{ $photo->user }}</p>
                 </div>
              </div>
-         @if($key%4==3)
+         @if($key%4==3||$key==sizeof($photos)-1)
           </div>
         @endif
       @endforeach
@@ -35,7 +35,7 @@
 
  @include('includes.pagination', ['paginator' => $photos])
 
- <p style="text-align:center;padding-top:7px;font-size:2rem;">Send us your photos to istenitcmail@gmail.com</p>
+ <p style="text-align:center;padding-top:7px;font-size:2rem;color:#000">Send us your photos to istenitcmail@gmail.com</p>
 
 
 @endsection

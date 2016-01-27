@@ -10,7 +10,7 @@
 
 <div class="row writer">
  <div class="col s12 m6">
-		 <h2>Is there a write in you?</h2>
+		 <h2>Is there a writer in you?</h2>
 		 <h4>We provide a platform to exhibit your writing skills.</h4>
  </div>
  <div class="col s12 m6">
@@ -23,7 +23,7 @@
 				 </li>
 				 <li>
 						 <div class="collapsible-header"><i class="icon icon-contact"></i>Contact Us</div>
-						 <div class="collapsible-body"><p>You can contact us at +91 9567212875r</p></div>
+						 <div class="collapsible-body"><p>You can contact us at +91 9567212875</p></div>
 				 </li>
 				 <li>
 						 <div class="collapsible-header"><i class="icon icon-info"></i>Info</div>
