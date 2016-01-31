@@ -5,7 +5,7 @@
 <meta property="og:title" content="{{$article->name}}" />
 <meta property="og:site_name" content="inquisite.istenitc.org"/>
 <meta property="og:url" content="{{url('articles/'.$article->id)}}"/>
-<meta property="og:description" content="Read the articles from new edition of inquisite." />
+<meta property="og:description" content="Read the articles from new edition of Inquisite." />
 <meta property="og:type" content="article" />
 <meta property="fb:app_id" content="148666522131344" />
 <meta property="og:image" content="{{url('images/inq.jpg')}}">

@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="Keywords" content="Inquisite, Indian Society for Technical Education, ISTE, NITC, National Institute of Technology Calicut, Calicut">
   <meta name="description" content="Online Magazine of Indian Society for Technical Education, NITC."/>
+	<link rel="icon" href="{{url('images/fav_logo.png')}}" type="image/png">
+	<link rel="shortcut icon" href="{{url('images/fav_logo.png')}}" type="image/png">
 
 	@yield('meta')
 
