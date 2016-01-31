@@ -8,7 +8,7 @@
 <meta property="og:description" content="Read and share tech in a new way." />
 <meta property="og:type" content="article" />
 <meta property="fb:app_id" content="148666522131344" />
-<meta property="og:image" content="{{url('images/inq.jpg')}}">
+<meta property="og:image" content="{{url('images/newlogo.png')}}">
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 
