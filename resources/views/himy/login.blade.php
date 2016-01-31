@@ -13,7 +13,7 @@
       <div class="transbar center"  style="padding-left: 5px">
 
           <h1 class="shadow">How I met you!</h2>
-              <p class="shadow">Who did you first meet from NITC ? <br/>
+              <p class="shadow">How did you first meet your besties at NITC ? <br/>
                   Do you have an interesting story about your meeting? <br/>
                   Share your story of how you met people!
               </p>

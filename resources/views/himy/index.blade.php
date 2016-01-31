@@ -17,7 +17,7 @@
 <div class="row container himy">
     <div class="transbar">
         <h1 class="shadow">How I met you!</h2>
-        <p class="shadow">Whom did you first meet from NITC ? <br/>
+        <p class="shadow">How did you first meet your besties at NITC ?<br/>
                 Do you have an interesting story about your meeting?
         </p>
         <div>

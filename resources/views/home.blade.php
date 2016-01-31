@@ -10,8 +10,8 @@
 
 <div class="row writer">
  <div class="col s12 m6">
-		 <h2>Is there a writer in you?</h2>
-		 <h4>We provide a platform to exhibit your writing skills.</h4>
+		 <h2>Found something new in the Tech World?</h2>
+		 <h4>We provide a platform to share your knowledge.</h4>
  </div>
  <div class="col s12 m6">
 		 <h4>Send your entries</h4>

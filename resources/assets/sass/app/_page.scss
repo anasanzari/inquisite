@@ -111,14 +111,15 @@ body.launch{
 
 
 .mainheader{
-    background-image: url(../images/aug.jpg);
+    background-image: url(../images/bulb.jpg);
     background-position: center;
+    background-size: cover;
     height:400px;
     padding-top: 80px;
     margin-bottom: 0;
     text-align: center;
     h1{
-        color: #fa3d44;
+        color: #fff;
         text-shadow: 4px 4px 3px rgba(0,0,0,.9),
             0px 0px 15px rgba(0,0,0,1);
     }
