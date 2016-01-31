@@ -4,7 +4,7 @@
 
 <meta property="og:title" content="ISTE NITC Students' Chapter" />
 <meta property="og:site_name" content="inquisite.istenitc.org"/>
-<meta property="og:url" content="http:/inquisite.istenitc.org"/>
+<meta property="og:url" content="http://inquisite.istenitc.org"/>
 <meta property="og:description" content="Read and share tech in a new way." />
 <meta property="og:type" content="article" />
 <meta property="fb:app_id" content="148666522131344" />
