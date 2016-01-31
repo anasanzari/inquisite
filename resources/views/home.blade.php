@@ -2,7 +2,7 @@
 
 @section('meta')
 
-<meta property="og:title" content="ISTE NITC Students' Chapter" />
+<meta property="og:title" content="Inquisite" />
 <meta property="og:site_name" content="inquisite.istenitc.org"/>
 <meta property="og:url" content="http://inquisite.istenitc.org/home"/>
 <meta property="og:description" content="Read and share tech in a new way." />
