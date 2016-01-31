@@ -1,5 +1,19 @@
 @extends('app')
 
+@section('meta')
+
+<meta property="og:title" content="ISTE NITC Students' Chapter" />
+<meta property="og:site_name" content="inquisite.istenitc.org"/>
+<meta property="og:url" content="http:/inquisite.istenitc.org"/>
+<meta property="og:description" content="Read and share tech in a new way." />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="148666522131344" />
+<meta property="og:image" content="{{url('images/inq.jpg')}}">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+@endsection
+
 @section('content')
 
 <div class="mainheader">
