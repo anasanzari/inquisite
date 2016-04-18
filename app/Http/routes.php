@@ -11,7 +11,10 @@ Route::controllers([
 ]);
 
 /*public routes*/
-Route::get('articles', 'ArticlesController@all');
+Route::get('editions', 'ArticlesController@editions');
+Route::get('editions/{year}/{month}', 'ArticlesController@lists');
+
+Route::get('articles', 'ArticlesController@all'); //latest edition
 Route::get('articles/{id}', 'ArticlesController@show');
 
 Route::get('photoclix','PhotosController@index');

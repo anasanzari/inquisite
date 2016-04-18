@@ -15,4 +15,5 @@ class Article extends Model {
       return $date;
   }
 
+
 }

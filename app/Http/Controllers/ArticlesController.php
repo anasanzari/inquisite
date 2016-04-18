@@ -10,13 +10,28 @@ use Validator;
 class ArticlesController extends Controller {
 
 	public function __construct(){
-		$this->middleware('auth',['except'=>['all','show']]);
+		$this->middleware('auth',['except'=>['all','show','editions','lists']]);
 	}
 
-	function all(){
-		$articles = Article::where('year',2016)->where('month',1)->get();
-		$month = Carbon::parse('2010/01/01')->format('F');
+
+	function editions(){
+		$editions = Article::groupBy('year','month')->get();
+		return view('articles.editions',['editions'=>$editions]);
+	}
+
+	function lists($year,$month){
+		$articles = Article::where('year',$year)->where('month',$month)->get();
+		$month = Carbon::parse($year.'/'.$month.'/01');
 		return view('articles.articles',['articles'=>$articles,'month'=>$month]);
+	}
+
+
+	function all(){
+		$article = Article::orderBy('year','desc')->orderBy('month','desc')->first();
+	//	return $article->year.$article->month->month;
+		$articles = Article::where('year',$article->year)->where('month',$article->month->month)->get();
+
+		return view('articles.articles',['articles'=>$articles,'month'=>$article->month]);
 	}
 	function show($id){
 		$article = Article::find($id);

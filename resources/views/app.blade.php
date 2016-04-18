@@ -28,7 +28,7 @@
 	        </ul>
 	        <a href="{{url('/')}}" class="brand-logo"><img src="{{url('images/nav_logo.png')}}" style="width:30px">Inquisite</a>
 	      <ul id="nav-mobile" class="right hide-on-small-only">
-	        <li><a href="{{url('articles')}}">Articles</a></li>
+	        <li><a href="{{url('editions')}}">Editions</a></li>
 	        <li><a href="{{url('photoclix')}}">Photoclix</a></li>
 	        <li><a href="{{url('interviews')}}">Interviews</a></li>
 	        <li><a href="{{url('himy')}}">HIMY</a></li>

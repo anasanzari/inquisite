@@ -5,17 +5,16 @@
 
 <div class="articlesbg"></div>
 <div class="row container articles">
-    <h1 class="shadow transbar">{{$month->year}} {{$month->format('F')}} Edition</h1>
-    <h3 class="shadow whitetext">Contents</h3>
+    <h1 class="shadow transbar">Editions</h1>
 
     <div class="row">
-      @foreach ($articles as $article)
+      @foreach ($editions as $e)
         <div class="col s12 m6">
           <div class="article-card card z-depth-2 hoverable">
             <div class="card-content">
-              <span class="title">{{$article->name}}</span>
-              <span class="sub-title">{{$article->author}}</span>
-              <a href="{{url('articles/'.$article->id)}}" class="waves-effect waves-light btn">Read More</a>
+              <span class="title">{{$e->year}} {{$e->month->format('F')}}</span>
+              <span class="sub-title"></span>
+              <a href="{{url('editions/'.$e->year.'/'.$e->month->month)}}" class="waves-effect waves-light btn">Read</a>
             </div>
           </div>
         </div>
