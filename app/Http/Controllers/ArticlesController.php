@@ -30,8 +30,8 @@ class ArticlesController extends Controller {
 		$article = Article::orderBy('year','desc')->orderBy('month','desc')->first();
 	//	return $article->year.$article->month->month;
 		$articles = Article::where('year',$article->year)->where('month',$article->month->month)->get();
-
-		return view('articles.articles',['articles'=>$articles,'month'=>$article->month]);
+    $month = Carbon::parse($article->year.'/'.$article->month->month.'/01');
+		return view('articles.articles',['articles'=>$articles,'month'=>$month]);
 	}
 	function show($id){
 		$article = Article::find($id);
