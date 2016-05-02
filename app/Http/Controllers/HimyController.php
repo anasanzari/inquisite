@@ -66,7 +66,7 @@ class HimyController extends Controller {
 			        "verify_peer_name"=>false,
 			    ),
 			);
-			$path = public_path().'\images\himy\s.jpg';
+			$path = public_path().'/images/himy/s.jpg';
 			if(file_exists($path)){
 				unlink($path);
 			}
@@ -74,7 +74,7 @@ class HimyController extends Controller {
 			file_put_contents($path, $data);
 
 			$img = Image::make(url('images/himy.jpg'));
-			$fb = Image::make(url('images/himy/s.jpg'));
+			$fb = Image::make($path);
 			$img->insert($fb,'top-left',525,240);
 			$text = $story->user->name." met ".$story->person;
 
