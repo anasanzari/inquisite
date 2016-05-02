@@ -66,7 +66,7 @@ class HimyController extends Controller {
 			        "verify_peer_name"=>false,
 			    ),
 			);
-
+			unlink(public_path().'\images\himy\s.jpg');
 			$data = file_get_contents($url, false, stream_context_create($arrContextOptions));
 			file_put_contents(public_path().'\images\himy\s.jpg', $data);
 
