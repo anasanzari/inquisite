@@ -66,9 +66,12 @@ class HimyController extends Controller {
 			        "verify_peer_name"=>false,
 			    ),
 			);
-			unlink(public_path().'\images\himy\s.jpg');
+			$path = public_path().'\images\himy\s.jpg';
+			if(file_exists($path)){
+				unlink($path);
+			}
 			$data = file_get_contents($url, false, stream_context_create($arrContextOptions));
-			file_put_contents(public_path().'\images\himy\s.jpg', $data);
+			file_put_contents($path, $data);
 
 			$img = Image::make(url('images/himy.jpg'));
 			$fb = Image::make(url('images/himy/s.jpg'));
